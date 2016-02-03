@@ -1,0 +1,478 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background: #FFF;
+  font-family: "Lato";
+}
+
+.page-header{
+  position: relative;
+  height: 115px;
+  max-width: 1020px;
+  margin: auto;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+
+
+  background: #FFF;
+
+  img{
+    height: 30px;
+  }
+
+  nav{
+    ul{
+      list-style: none;
+      position: absolute;
+      right: 20px;
+      margin: 0;
+      li{
+        display: inline-block;
+        margin-left: 10px;
+
+        a{
+          font-size: 14px;
+          font-family: "Lato";
+          font-weight: 300;
+          color: #444;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &:hover{
+            color: #111;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+.slider{
+  height: 530px;
+  max-height: 530px;;
+  width: 100%;
+  background: url('../img/Container.png') no-repeat;;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  h2{
+    color: #FFF;
+    font-family: "Lato";
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  lead{
+    text-align: center;
+    color: #FFF;
+  }
+
+}
+
+.cta-btn{
+  background: #7BC575;
+  border: 0;
+  padding: 15px;
+  width: 140px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #FFF;
+  &:hover{
+    background: darken(#7BC575, 7%);
+
+
+  }
+}
+
+%site-section{
+  display: flex;
+  width: 100%;
+  min-height: 200px;
+  background: #FFF;
+
+  // border-bottom: 2px solid black;
+  h3{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 40px;
+    margin: 0;
+  }
+  p{
+    margin: 0;
+    color: #777777;
+  }
+}
+
+  .services{
+    @extend %site-section;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+
+    justify-content: space-around;
+
+    .services-list{
+      display: flex;
+      width: 900px;
+      align-items: center;
+      justify-content: space-around;
+
+      .service{
+        padding: 30px 10px;
+        text-align: center;
+        img{
+          height: 50px;
+        }
+        p{
+          font-size: 14px;
+        }
+
+        h4{
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+        // margin: 0 20px;
+      }
+    }
+
+
+  }
+
+  .info{
+    @extend %site-section;
+    flex-direction: row;
+    height: 616px;
+    // flex-grow: 1;
+
+    .info-img{
+      width: 40%;
+      height: 616px;
+      background: #E9E9E9;
+      overflow: hidden;
+
+      img{
+        transform: translate(50%, 25%);
+      }
+
+    }
+
+    .info-text{
+      width: 100%;
+      background: url("../img/Shape 3.png") no-repeat;
+      background-size: cover;
+
+      h3{
+        margin: 100px 0 30px 100px;
+        color: #FFF;
+        i{
+          color: #7BC575;
+        }
+      }
+
+      p, ul, button{
+        margin-left: 100px;
+      }
+
+      p{
+        color: #FFF;
+        width: 400px;
+        font-weight: 300;
+
+        line-height: 1.5;
+      }
+
+      .lifting-info{
+        padding: 10px 0 20px 0;
+        li{
+          background: url('../img/arrow.png') no-repeat left center;
+          list-style: none;
+          height: 32px;
+          margin: 10px 0; /* not needed, just to add space between the li's */
+          padding-left: 50px; /* Offsets the text. Needs to be at least the width of your image */
+          line-height: 30px; /* Might have to play with this value a bit */
+          color: #FFF;
+          font-weight: 300;
+        }
+      }
+
+      button{
+        @extend .cta-btn;
+      }
+
+
+    }
+  }
+
+  .last-project{
+    @extend %site-section;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content:flex-start;
+    height: 824px;
+    overflow: hidden;
+
+    .last-project-heading{
+      text-align: center;
+      margin-top: 100px;
+
+      p{
+        font-weight: 300;
+      }
+
+    }
+
+
+    .framework-info-container{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 500px;
+      width: 100%;
+      position: relative;
+
+      .info-text, .info-img{
+        width: 50%;
+      }
+
+      .info-text{
+        // margin-top: 85px;
+        margin-left: 200px;
+        max-width: 470px;
+        // flex-grow: 1;
+        // left: -100px;
+
+        .view-detalis-product{
+          padding: 20px;
+          margin-top: 20px;
+          font-size: 14px;
+          color: #7BC575;
+          font-family: "Lato";
+          font-weight: 300;
+          text-decoration: none;
+          text-transform: uppercase;
+
+        }
+
+      }
+
+      .info-img {
+        height: 613px;
+
+        img{
+          position: absolute;
+          width: inherit;
+          top: 50px;
+          float: right;
+        }
+      }
+
+    }
+
+  }
+
+  .culture{
+    @extend %site-section;
+    flex-direction: column;
+    align-items: center;
+    height: 560px;
+    background: #E9E9E9;
+
+    .culture-header{
+      text-align: center;
+      margin-top: 100px;
+
+      p{
+        font-weight: 300;
+      }
+
+    }
+
+    .values{
+      // margin: 0 100px;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-top: 50px;
+
+      .horizontal-margin-line{
+        width: 100%;
+        height: 2px;
+        background: black;
+        margin-bottom: 140px;
+      }
+
+      .value{
+
+        text-align: center;
+        // max-width: 270px;
+      }
+
+
+    }
+
+  }
+
+  .clients{
+    @extend %site-section;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .client-container{
+      display: flex;
+      flex-direction: column;
+
+      .client{
+        display: flex;
+        flex-direction: row;
+        padding: 50px 0;
+        align-items: center;
+
+        &:nth-child(2n){
+          flex-direction: row-reverse;
+        }
+
+
+        .client-quote{
+          max-width: 650px;
+          height: 170px;
+          margin: 0 50px;
+          background: #F9F9F9;
+          border-radius: 5px;
+
+          .client-quote-p{
+            padding: 0 20px;
+            margin-top: 60px;
+          }
+
+        }
+
+        .client-face{
+          width: 270px;
+          height: 270px;
+          border-radius: 50%;
+          background: #F9F9F9;
+        }
+      }
+
+    }
+  }
+
+  .cta-section{
+    @extend %site-section;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    background: #7BC575;
+
+    h2{
+      font-size: 40px;
+      font-family: "Lato";
+      text-transform: uppercase;
+      color: #FFF;
+      font-weight: 300;
+
+    }
+
+    button{
+      width: 170px;
+      height: 60px;
+      border: 2px solid #FFF;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0);
+      color: #FFF;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-family: "Lato";
+      font-weight: 400;
+    }
+  }
+
+  .partners{
+    @extend %site-section;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    ul{
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+
+      li{
+        padding: 0 50px;
+      }
+
+    }
+  }
+
+  .page-footer{
+
+    background: #222;
+
+    .resume{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      padding: 100px;
+      flex-grow: 1;
+
+      color: white;
+
+      .contact-us, .lastest-project, .lastest-tweets{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+
+        h4{
+          text-transform: uppercase;
+          font-weight: 400;
+          font-family: "Lato";
+          font-size: 20px;
+        }
+
+        p{
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    .copyrights{
+      height: 100px;
+      background: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .social-icons{
+
+
+
+        .social{
+          width: 41px;
+          float: left;
+          margin-left: 10px
+        }
+
+      }
+
+    }
+
+  }
